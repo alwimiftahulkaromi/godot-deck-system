@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://c8cifx0yr64up"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_u7mpc"]
+
+[resource]
+script = ExtResource("1_u7mpc")
+name = "Yankee"
+attack = 77
+shopStock = 5

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://8uf75qsj56ma"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_lqi28"]
+
+[resource]
+script = ExtResource("1_lqi28")
+name = "India"
+attack = 2
+shopStock = 5

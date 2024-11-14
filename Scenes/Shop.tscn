@@ -1,0 +1,253 @@
+[gd_scene load_steps=32 format=3 uid="uid://k3m2apxlglv1"]
+
+[ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_1lrrl"]
+[ext_resource type="PackedScene" uid="uid://dstkdhmct3mli" path="res://Scenes/Card.tscn" id="1_uvcg1"]
+[ext_resource type="PackedScene" uid="uid://4cfudyxlfyfk" path="res://Scenes/CardSlot.tscn" id="2_1facb"]
+[ext_resource type="Resource" uid="uid://mqtvayx51cq5" path="res://Resources/DefaultPlayerResource.tres" id="2_v5emv"]
+[ext_resource type="Resource" uid="uid://jhcva83avrwa" path="res://Resources/Cards/AlfaCard.tres" id="3_affeb"]
+[ext_resource type="Resource" uid="uid://c3jg7xbvlnige" path="res://Resources/Cards/BravoCard.tres" id="4_k5ivx"]
+[ext_resource type="Resource" uid="uid://ck65onhi2fdr6" path="res://Resources/Cards/CharlieCard.tres" id="5_1wn2q"]
+[ext_resource type="Resource" uid="uid://dxchi1ec1n4m1" path="res://Resources/Cards/DeltaCard.tres" id="6_vx1mc"]
+[ext_resource type="Resource" uid="uid://d3du3juft5y2g" path="res://Resources/Cards/EchoCard.tres" id="7_8w6c0"]
+[ext_resource type="Resource" uid="uid://bq5s87k7epmhb" path="res://Resources/Cards/FoxtrotCard.tres" id="8_ktv1n"]
+[ext_resource type="Resource" uid="uid://76q00cvnm4tm" path="res://Resources/Cards/GolfCard.tres" id="9_cq2w7"]
+[ext_resource type="Resource" uid="uid://tdb8l7ast12c" path="res://Resources/Cards/HotelCard.tres" id="10_w87dx"]
+[ext_resource type="Resource" uid="uid://8uf75qsj56ma" path="res://Resources/Cards/IndiaCard.tres" id="11_xw3oy"]
+[ext_resource type="Resource" uid="uid://bgbyesg6v7116" path="res://Resources/Cards/JuliettCard.tres" id="12_yxwx0"]
+[ext_resource type="Resource" uid="uid://dnge3xf4cq0dm" path="res://Resources/Cards/KiloCard.tres" id="13_aynx5"]
+[ext_resource type="Resource" uid="uid://cop1dm4btcmfr" path="res://Resources/Cards/LimaCard.tres" id="14_dcw7j"]
+[ext_resource type="Resource" uid="uid://edqrif6tissd" path="res://Resources/Cards/MikeCard.tres" id="15_bp515"]
+[ext_resource type="Resource" uid="uid://ngow33u7u5ye" path="res://Resources/Cards/NovemberCard.tres" id="16_3p83p"]
+[ext_resource type="Resource" uid="uid://q5n0w4pyqke4" path="res://Resources/Cards/OscarCard.tres" id="17_i7nk2"]
+[ext_resource type="Resource" uid="uid://dmd7mfcjw0akd" path="res://Resources/Cards/PapaCard.tres" id="18_m4uey"]
+[ext_resource type="Resource" uid="uid://c5winxfk6xuug" path="res://Resources/Cards/QuebecCard.tres" id="19_ipb4q"]
+[ext_resource type="Resource" uid="uid://bagwfck6ehb1y" path="res://Resources/Cards/RomeoCard.tres" id="20_furbk"]
+[ext_resource type="Resource" uid="uid://c3hsaqaalikm0" path="res://Resources/Cards/SierraCard.tres" id="21_qe36g"]
+[ext_resource type="Resource" uid="uid://h406xtgbbw0e" path="res://Resources/Cards/TangoCard.tres" id="22_vlexm"]
+[ext_resource type="Resource" uid="uid://77bxdd7p1q5v" path="res://Resources/Cards/UniformCard.tres" id="23_f4vuh"]
+[ext_resource type="Resource" uid="uid://cruis8xbbk005" path="res://Resources/Cards/VictorCard.tres" id="24_6ajvy"]
+[ext_resource type="Resource" uid="uid://beogkj50x0aw0" path="res://Resources/Cards/WhiskeyCard.tres" id="25_jmpfv"]
+[ext_resource type="Resource" uid="uid://yixudoa4s7v7" path="res://Resources/Cards/XRayCard.tres" id="26_kjvxk"]
+[ext_resource type="Resource" uid="uid://c8cifx0yr64up" path="res://Resources/Cards/YankeeCard.tres" id="27_hqugp"]
+[ext_resource type="Resource" uid="uid://dslxmqu1qpha6" path="res://Resources/Cards/ZuluCard.tres" id="28_dliy2"]
+[ext_resource type="FontFile" uid="uid://cb3gcyu5jwksh" path="res://Fonts/PixelOperator8-Bold.ttf" id="30_bwioc"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lrrl")
+playerResource = ExtResource("2_v5emv")
+
+[node name="ShopGrid" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(620, 660)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -335.0
+offset_right = 612.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(314, 0)
+theme_override_constants/h_separation = 104
+theme_override_constants/v_separation = 132
+columns = 6
+
+[node name="CardSlot" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card" parent="ShopGrid/CardSlot" instance=ExtResource("1_uvcg1")]
+z_index = 5
+cardResource = ExtResource("3_affeb")
+
+[node name="CardSlot2" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card2" parent="ShopGrid/CardSlot2" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("4_k5ivx")
+
+[node name="CardSlot3" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card3" parent="ShopGrid/CardSlot3" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("5_1wn2q")
+
+[node name="CardSlot4" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card4" parent="ShopGrid/CardSlot4" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("6_vx1mc")
+
+[node name="CardSlot5" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card5" parent="ShopGrid/CardSlot5" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("7_8w6c0")
+
+[node name="CardSlot6" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card6" parent="ShopGrid/CardSlot6" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("8_ktv1n")
+
+[node name="CardSlot7" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card7" parent="ShopGrid/CardSlot7" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("9_cq2w7")
+
+[node name="CardSlot8" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card8" parent="ShopGrid/CardSlot8" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("10_w87dx")
+
+[node name="CardSlot9" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card9" parent="ShopGrid/CardSlot9" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("11_xw3oy")
+
+[node name="CardSlot10" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card10" parent="ShopGrid/CardSlot10" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("12_yxwx0")
+
+[node name="CardSlot11" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card11" parent="ShopGrid/CardSlot11" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("13_aynx5")
+
+[node name="CardSlot12" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card12" parent="ShopGrid/CardSlot12" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("14_dcw7j")
+
+[node name="CardSlot13" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card13" parent="ShopGrid/CardSlot13" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("15_bp515")
+
+[node name="CardSlot14" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card14" parent="ShopGrid/CardSlot14" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("16_3p83p")
+
+[node name="CardSlot15" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card15" parent="ShopGrid/CardSlot15" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("17_i7nk2")
+
+[node name="CardSlot16" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card16" parent="ShopGrid/CardSlot16" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("18_m4uey")
+
+[node name="CardSlot17" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card17" parent="ShopGrid/CardSlot17" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("19_ipb4q")
+
+[node name="CardSlot18" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card18" parent="ShopGrid/CardSlot18" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("20_furbk")
+
+[node name="CardSlot19" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card19" parent="ShopGrid/CardSlot19" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("21_qe36g")
+
+[node name="CardSlot20" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card20" parent="ShopGrid/CardSlot20" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("22_vlexm")
+
+[node name="CardSlot21" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card21" parent="ShopGrid/CardSlot21" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("23_f4vuh")
+
+[node name="CardSlot22" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card22" parent="ShopGrid/CardSlot22" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("24_6ajvy")
+
+[node name="CardSlot23" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card23" parent="ShopGrid/CardSlot23" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("25_jmpfv")
+
+[node name="CardSlot24" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card24" parent="ShopGrid/CardSlot24" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("26_kjvxk")
+
+[node name="CardSlot25" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card25" parent="ShopGrid/CardSlot25" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("27_hqugp")
+
+[node name="CardSlot26" parent="ShopGrid" instance=ExtResource("2_1facb")]
+layout_mode = 2
+
+[node name="Card26" parent="ShopGrid/CardSlot26" instance=ExtResource("1_uvcg1")]
+cardResource = ExtResource("28_dliy2")
+
+[node name="DrawGachaButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 296.0
+offset_right = 495.0
+offset_bottom = 336.0
+theme_override_fonts/font = ExtResource("30_bwioc")
+theme_override_font_sizes/font_size = 24
+text = "Draw 10 Cards"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("30_bwioc")
+theme_override_font_sizes/font_size = 16
+text = "Main Menu"
+
+[node name="GoldText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 580.0
+offset_right = 580.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("30_bwioc")
+theme_override_font_sizes/font_size = 24
+text = "Player Gold: "
+vertical_alignment = 1
+
+[connection signal="pressed" from="DrawGachaButton" to="." method="OnDrawGachaButtonPressed"]
+[connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

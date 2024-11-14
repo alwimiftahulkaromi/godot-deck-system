@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://c5winxfk6xuug"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_bb03n"]
+
+[resource]
+script = ExtResource("1_bb03n")
+name = "Quebec"
+attack = 6
+shopStock = 5

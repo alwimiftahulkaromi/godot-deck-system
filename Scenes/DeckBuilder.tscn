@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6twnxt4kll7n"]
+
+[ext_resource type="Script" path="res://Scripts/DeckBuilder.gd" id="1_hj2op"]
+[ext_resource type="Resource" uid="uid://mqtvayx51cq5" path="res://Resources/DefaultPlayerResource.tres" id="2_w40us"]
+[ext_resource type="PackedScene" uid="uid://dstkdhmct3mli" path="res://Scenes/Card.tscn" id="2_wytvu"]
+[ext_resource type="PackedScene" uid="uid://drv7ngkvake11" path="res://Scenes/Inventory.tscn" id="3_3pvvb"]
+[ext_resource type="FontFile" uid="uid://cb3gcyu5jwksh" path="res://Fonts/PixelOperator8-Bold.ttf" id="4_gd3ci"]
+
+[node name="DeckBuilder" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hj2op")
+playerResource = ExtResource("2_w40us")
+
+[node name="DeckGrid" type="GridContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 198.0
+offset_top = 34.0
+offset_right = 610.0
+offset_bottom = 426.0
+scale = Vector2(1.64, 1.64)
+theme_override_constants/h_separation = 104
+theme_override_constants/v_separation = 132
+columns = 4
+
+[node name="Card" parent="DeckGrid" instance=ExtResource("2_wytvu")]
+
+[node name="Inventory" parent="." instance=ExtResource("3_3pvvb")]
+layout_mode = 1
+offset_left = 956.0
+offset_top = 33.0
+offset_right = 88.0
+offset_bottom = 233.0
+scale = Vector2(0.7, 0.7)
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("4_gd3ci")
+theme_override_font_sizes/font_size = 16
+text = "Main Menu"
+
+[node name="SellRandomCard" type="Button" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 306.0
+offset_right = 670.0
+offset_bottom = 376.0
+theme_override_fonts/font = ExtResource("4_gd3ci")
+theme_override_font_sizes/font_size = 24
+text = "Sell 1 Random Card"
+autowrap_mode = 3
+
+[node name="GoldText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 580.0
+offset_right = 580.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("4_gd3ci")
+theme_override_font_sizes/font_size = 24
+text = "Player Gold:"
+vertical_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]
+[connection signal="pressed" from="SellRandomCard" to="." method="OnSellRandomCardPressed"]

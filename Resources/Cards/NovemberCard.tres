@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://ngow33u7u5ye"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_kpmgk"]
+
+[resource]
+script = ExtResource("1_kpmgk")
+name = "November"
+attack = 11
+shopStock = 5

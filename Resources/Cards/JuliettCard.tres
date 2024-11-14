@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://bgbyesg6v7116"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_bua7u"]
+
+[resource]
+script = ExtResource("1_bua7u")
+name = "Juliett"
+attack = 99
+shopStock = 5

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://76q00cvnm4tm"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_258m7"]
+
+[resource]
+script = ExtResource("1_258m7")
+name = "Golf"
+attack = 36
+shopStock = 5

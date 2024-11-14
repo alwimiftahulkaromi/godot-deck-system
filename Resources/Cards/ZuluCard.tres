@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://dslxmqu1qpha6"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_pc227"]
+
+[resource]
+script = ExtResource("1_pc227")
+name = "Zulu"
+attack = 13
+shopStock = 5

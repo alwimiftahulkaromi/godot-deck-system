@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://dnge3xf4cq0dm"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_7dh2s"]
+
+[resource]
+script = ExtResource("1_7dh2s")
+name = "Kilo"
+attack = 25
+shopStock = 5

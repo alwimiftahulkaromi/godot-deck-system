@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://beogkj50x0aw0"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_k3jpu"]
+
+[resource]
+script = ExtResource("1_k3jpu")
+name = "Whiskey"
+attack = 69
+shopStock = 5

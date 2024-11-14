@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://dxchi1ec1n4m1"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_xqm5g"]
+
+[resource]
+script = ExtResource("1_xqm5g")
+name = "Delta"
+attack = 15
+shopStock = 5

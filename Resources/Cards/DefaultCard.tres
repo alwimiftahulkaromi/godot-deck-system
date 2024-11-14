@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://x2moyujcqflq"]
+
+[ext_resource type="Script" path="res://Scripts/CardResource.gd" id="1_d25nw"]
+
+[resource]
+script = ExtResource("1_d25nw")
+name = "Default Name"
+attack = 0
+shopStock = 5
+inventoryCount = 0
+inDeckCount = 0

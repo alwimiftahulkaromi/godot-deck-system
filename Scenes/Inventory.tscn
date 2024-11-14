@@ -1,0 +1,216 @@
+[gd_scene load_steps=30 format=3 uid="uid://drv7ngkvake11"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory.gd" id="1_bn2g0"]
+[ext_resource type="PackedScene" uid="uid://4cfudyxlfyfk" path="res://Scenes/CardSlot.tscn" id="2_47yqm"]
+[ext_resource type="PackedScene" uid="uid://dstkdhmct3mli" path="res://Scenes/Card.tscn" id="2_pitdu"]
+[ext_resource type="Resource" uid="uid://jhcva83avrwa" path="res://Resources/Cards/AlfaCard.tres" id="3_kv31b"]
+[ext_resource type="Resource" uid="uid://c3jg7xbvlnige" path="res://Resources/Cards/BravoCard.tres" id="4_f8bfb"]
+[ext_resource type="Resource" uid="uid://ck65onhi2fdr6" path="res://Resources/Cards/CharlieCard.tres" id="5_vaiqu"]
+[ext_resource type="Resource" uid="uid://dxchi1ec1n4m1" path="res://Resources/Cards/DeltaCard.tres" id="6_2or6f"]
+[ext_resource type="Resource" uid="uid://d3du3juft5y2g" path="res://Resources/Cards/EchoCard.tres" id="7_jg1ha"]
+[ext_resource type="Resource" uid="uid://bq5s87k7epmhb" path="res://Resources/Cards/FoxtrotCard.tres" id="8_vvusf"]
+[ext_resource type="Resource" uid="uid://76q00cvnm4tm" path="res://Resources/Cards/GolfCard.tres" id="9_7t2oo"]
+[ext_resource type="Resource" uid="uid://tdb8l7ast12c" path="res://Resources/Cards/HotelCard.tres" id="10_t2c1g"]
+[ext_resource type="Resource" uid="uid://8uf75qsj56ma" path="res://Resources/Cards/IndiaCard.tres" id="11_sacmv"]
+[ext_resource type="Resource" uid="uid://bgbyesg6v7116" path="res://Resources/Cards/JuliettCard.tres" id="12_s5vtu"]
+[ext_resource type="Resource" uid="uid://dnge3xf4cq0dm" path="res://Resources/Cards/KiloCard.tres" id="13_tf6pi"]
+[ext_resource type="Resource" uid="uid://cop1dm4btcmfr" path="res://Resources/Cards/LimaCard.tres" id="14_e1v0h"]
+[ext_resource type="Resource" uid="uid://edqrif6tissd" path="res://Resources/Cards/MikeCard.tres" id="15_yf2nu"]
+[ext_resource type="Resource" uid="uid://ngow33u7u5ye" path="res://Resources/Cards/NovemberCard.tres" id="16_12egb"]
+[ext_resource type="Resource" uid="uid://q5n0w4pyqke4" path="res://Resources/Cards/OscarCard.tres" id="17_iwt57"]
+[ext_resource type="Resource" uid="uid://dmd7mfcjw0akd" path="res://Resources/Cards/PapaCard.tres" id="18_6k6ud"]
+[ext_resource type="Resource" uid="uid://c5winxfk6xuug" path="res://Resources/Cards/QuebecCard.tres" id="19_0yqbt"]
+[ext_resource type="Resource" uid="uid://bagwfck6ehb1y" path="res://Resources/Cards/RomeoCard.tres" id="20_7shnd"]
+[ext_resource type="Resource" uid="uid://c3hsaqaalikm0" path="res://Resources/Cards/SierraCard.tres" id="21_c4ohi"]
+[ext_resource type="Resource" uid="uid://h406xtgbbw0e" path="res://Resources/Cards/TangoCard.tres" id="22_3w1vr"]
+[ext_resource type="Resource" uid="uid://77bxdd7p1q5v" path="res://Resources/Cards/UniformCard.tres" id="23_keq48"]
+[ext_resource type="Resource" uid="uid://cruis8xbbk005" path="res://Resources/Cards/VictorCard.tres" id="24_rcsf6"]
+[ext_resource type="Resource" uid="uid://beogkj50x0aw0" path="res://Resources/Cards/WhiskeyCard.tres" id="25_8e2gh"]
+[ext_resource type="Resource" uid="uid://yixudoa4s7v7" path="res://Resources/Cards/XRayCard.tres" id="26_js85c"]
+[ext_resource type="Resource" uid="uid://c8cifx0yr64up" path="res://Resources/Cards/YankeeCard.tres" id="27_p76ui"]
+[ext_resource type="Resource" uid="uid://dslxmqu1qpha6" path="res://Resources/Cards/ZuluCard.tres" id="28_wqa8g"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -868.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bn2g0")
+
+[node name="InventoryGrid" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(412, 920)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -460.0
+offset_right = 206.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 104
+theme_override_constants/v_separation = 132
+columns = 4
+
+[node name="CardSlot" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card" parent="InventoryGrid/CardSlot" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("3_kv31b")
+
+[node name="CardSlot2" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card2" parent="InventoryGrid/CardSlot2" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("4_f8bfb")
+
+[node name="CardSlot3" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card3" parent="InventoryGrid/CardSlot3" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("5_vaiqu")
+
+[node name="CardSlot4" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card4" parent="InventoryGrid/CardSlot4" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("6_2or6f")
+
+[node name="CardSlot5" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card5" parent="InventoryGrid/CardSlot5" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("7_jg1ha")
+
+[node name="CardSlot6" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card6" parent="InventoryGrid/CardSlot6" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("8_vvusf")
+
+[node name="CardSlot7" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card7" parent="InventoryGrid/CardSlot7" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("9_7t2oo")
+
+[node name="CardSlot8" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card8" parent="InventoryGrid/CardSlot8" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("10_t2c1g")
+
+[node name="CardSlot9" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card9" parent="InventoryGrid/CardSlot9" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("11_sacmv")
+
+[node name="CardSlot10" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card10" parent="InventoryGrid/CardSlot10" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("12_s5vtu")
+
+[node name="CardSlot11" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card11" parent="InventoryGrid/CardSlot11" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("13_tf6pi")
+
+[node name="CardSlot12" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card12" parent="InventoryGrid/CardSlot12" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("14_e1v0h")
+
+[node name="CardSlot13" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card13" parent="InventoryGrid/CardSlot13" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("15_yf2nu")
+
+[node name="CardSlot14" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card14" parent="InventoryGrid/CardSlot14" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("16_12egb")
+
+[node name="CardSlot15" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card15" parent="InventoryGrid/CardSlot15" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("17_iwt57")
+
+[node name="CardSlot16" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card16" parent="InventoryGrid/CardSlot16" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("18_6k6ud")
+
+[node name="CardSlot17" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card17" parent="InventoryGrid/CardSlot17" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("19_0yqbt")
+
+[node name="CardSlot18" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card18" parent="InventoryGrid/CardSlot18" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("20_7shnd")
+
+[node name="CardSlot19" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card19" parent="InventoryGrid/CardSlot19" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("21_c4ohi")
+
+[node name="CardSlot20" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card20" parent="InventoryGrid/CardSlot20" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("22_3w1vr")
+
+[node name="CardSlot21" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card21" parent="InventoryGrid/CardSlot21" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("23_keq48")
+
+[node name="CardSlot22" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card22" parent="InventoryGrid/CardSlot22" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("24_rcsf6")
+
+[node name="CardSlot23" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card23" parent="InventoryGrid/CardSlot23" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("25_8e2gh")
+
+[node name="CardSlot24" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card24" parent="InventoryGrid/CardSlot24" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("26_js85c")
+
+[node name="CardSlot25" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card25" parent="InventoryGrid/CardSlot25" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("27_p76ui")
+
+[node name="CardSlot26" parent="InventoryGrid" instance=ExtResource("2_47yqm")]
+layout_mode = 2
+
+[node name="Card26" parent="InventoryGrid/CardSlot26" instance=ExtResource("2_pitdu")]
+cardResource = ExtResource("28_wqa8g")
